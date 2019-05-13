@@ -16,7 +16,7 @@ namespace EntityFramework.Demo.TptModel.CodeFirst
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=tcp:deme-databases.database.windows.net,1433;Initial Catalog=AdvantureWorks;Persist Security Info=False;User ID=sqladmin;Password=P@$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer("Server=tcp:deme-databases.database.windows.net,1433;Initial Catalog=vanthi-demo;Persist Security Info=False;User ID=sqladmin;Password=P@$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
         public void SeedData()
 		{

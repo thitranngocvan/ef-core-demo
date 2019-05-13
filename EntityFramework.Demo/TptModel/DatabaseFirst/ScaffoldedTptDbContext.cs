@@ -15,7 +15,12 @@ namespace EntityFramework.Demo.TptModel.DatabaseFirst
 		{
 		}
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=tcp:deme-databases.database.windows.net,1433;Initial Catalog=vanthi-demo;Persist Security Info=False;User ID=sqladmin;Password=P@$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Customer>(entity =>
 													{

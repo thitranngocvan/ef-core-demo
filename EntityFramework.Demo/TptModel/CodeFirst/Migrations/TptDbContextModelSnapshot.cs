@@ -52,7 +52,7 @@ namespace EntityFramework.Demo.TptModel.CodeFirst.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PeopleTpt");
+                    b.ToTable("People");
                 });
 
             modelBuilder.Entity("EntityFramework.Demo.TptModel.CodeFirst.CustomerTpt", b =>

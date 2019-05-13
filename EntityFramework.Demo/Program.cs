@@ -29,16 +29,30 @@ namespace EntityFramework.Demo
             var loggerFactory = GetLoggerFactory();
             var logger = loggerFactory.CreateLogger<DemosBase>();
 
-           //ExecuteDemoDbQueries(loggerFactory, loggerFactory.CreateLogger<N_Plus_One_Queries>());
-            //ExecuteTphQueries(loggerFactory, logger);
-            ExecuteTptQueries(loggerFactory, logger);
+            //ExecuteDemoDbQueries(loggerFactory, loggerFactory.CreateLogger<N_Plus_One_Queries>());
+
+            /*
+             
+Server=tcp:deme-databases.database.windows.net,1433;Initial Catalog=AdvantureWorks;Persist Security Info=False;User ID=sqladmin;Password=P@$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+             */
+            ExecuteTphQueries(loggerFactory, logger);
+
+            //ExecuteTptQueries(loggerFactory, logger);
             //ExecuteTphDatabaseFirstQueries(loggerFactory, logger);
-            //ExecuteTptDatabaseFirstQueries(loggerFactory, logger);
+
+
+            /*
+             * 
+Server=tcp:deme-databases.database.windows.net,1433;Initial Catalog=vanthi-demo;Persist Security Info=False;User ID=sqladmin;Password=P@$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+             */
+            ExecuteTptDatabaseFirstQueries(loggerFactory, logger);
+            
             //ExecuteSchemaChangeQueries(loggerFactory, logger);
             //ExecuteTransactionScopeDemosAsync(loggerFactory, loggerFactory.CreateLogger<TransactionScope_Limitations_Demos>()).GetAwaiter().GetResult();
             //ExecuteSelectManyIssues(loggerFactory, logger);
 
-            DebugScaffolding();
+            //DebugScaffolding();
 
 
         }
